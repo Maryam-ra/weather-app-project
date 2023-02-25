@@ -2,16 +2,7 @@ body {
 font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
 }
 
-.weather {
 
-    max-width: 600px;
-    margin:100px auto;
-    padding: 20px;
-    border: 1px solid #dadde1;
-    border-radius: 5px;
-
-
-}
 h1 {
     color: rgb (39, 33, 66);
     font-size: 38px;
@@ -31,4 +22,15 @@ li {
     font-size: 16px;
     font-weight: 400;   
     line-height: 22px; 
+    text-transform: capitalize;
+}
+.weather {
+
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #dadde1;
+    border-radius: 5px;
+
+
 }
