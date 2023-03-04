@@ -13,6 +13,45 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+   let days = ["Sat", "Sun", "Mon",];
+
+   
+  let forecastHTML =  `<div class="row">`; 
+
+  
+  days.forEach(function(day) {
+
+ forecastHTML = forecastHTML + 
+  
+  `<div class="col-2">
+        <div class="weather-forecast-date">
+        ${day}
+    </div>
+    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png" alt="" width="36"/>
+
+     <div class="weather-forecase-teperatures">
+      <span class="weather-forecast-temperature-max">
+        18° </span>  
+        <span class="weather-forecast-temperature-min">
+
+        12°</span>
+     </div>
+    </div>
+`;
+
+  });
+ 
+  
+  forecastHTML = forecastHTML + `</div>`;
+  
+  forecastElement.innerHTML = forecastHTML; 
+   
+}
+
+
 function displayTemperature(response) {
 
 
@@ -55,3 +94,5 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+displayForecast();
